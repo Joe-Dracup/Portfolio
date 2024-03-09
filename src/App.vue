@@ -12,4 +12,3 @@ import NavBar from './components/Navigation/NavBar.vue'
 </template>
 
 <style scoped></style>
-./components/Navigation/NavBar.vue
