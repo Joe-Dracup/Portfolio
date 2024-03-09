@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import NavLink from './Nav-Link.vue'
-import ThemeToggler from './Theme-Toggler.vue'
+import NavLink from './NavLink.vue'
+import ThemeToggler from './ThemeToggler.vue'
 
 let showSubMenu = ref(false)
 </script>
@@ -74,3 +74,4 @@ let showSubMenu = ref(false)
   transform: translateY(-30px);
 }
 </style>
+./NavLink.vue./ThemeToggler.vue

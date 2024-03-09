@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
+// ToDo - fix flashbanging
+
 const isDarkMode = ref(window.matchMedia('(prefers-color-scheme: dark)').matches)
 
 setTheme()

@@ -10,7 +10,7 @@
 <style scoped>
 @import '../assets/variables.css';
 .main-card {
-  background-color: var(--color-background-soft);
+  background-color: var(--color-background-mute);
   padding: 6rem;
 }
 </style>

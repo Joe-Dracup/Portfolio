@@ -9,7 +9,7 @@ let props = defineProps({
 
 <template>
   <div class="link-container">
-    <RouterLink class="link" :to="props.To">{{ props.Name }}</RouterLink>
+    <RouterLink class="link" :to="props.To ?? ''">{{ props.Name }}</RouterLink>
   </div>
 </template>
 
