@@ -3,7 +3,12 @@ import { ref } from 'vue'
 import NavLink from './NavLink.vue'
 import ThemeToggler from './ThemeToggler.vue'
 
-let showSubMenu = ref(false)
+const showSubMenu = ref(false)
+
+let navLinks = [
+  { To: '/', Name: 'Home' },
+  { To: '/about', Name: 'About' }
+]
 </script>
 
 <template>
@@ -30,8 +35,13 @@ let showSubMenu = ref(false)
   </div>
   <Transition name="slide">
     <div class="nav-item-container" v-if="showSubMenu">
-      <NavLink @navigating="showSubMenu = false" To="/" Name="Home" />
-      <NavLink @navigating="showSubMenu = false" To="/about" Name="About" />
+      <NavLink
+        v-for="nav in navLinks"
+        @navigating="showSubMenu = false"
+        :To="nav.To"
+        :Name="nav.Name"
+        :key="nav.To"
+      />
     </div>
   </Transition>
 </template>
