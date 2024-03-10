@@ -40,5 +40,6 @@ function handleClick() {
   color: var(--color-text);
   padding: 0.66rem;
   display: flex;
+  text-decoration: underline;
 }
 </style>
