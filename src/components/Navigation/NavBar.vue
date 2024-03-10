@@ -30,8 +30,8 @@ let showSubMenu = ref(false)
   </div>
   <Transition name="slide">
     <div class="nav-item-container" v-if="showSubMenu">
-      <NavLink To="/" Name="Home" />
-      <NavLink To="/about" Name="About" />
+      <NavLink @navigating="showSubMenu = false" To="/" Name="Home" />
+      <NavLink @navigating="showSubMenu = false" To="/about" Name="About" />
     </div>
   </Transition>
 </template>

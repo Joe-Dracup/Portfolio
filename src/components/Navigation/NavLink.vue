@@ -1,15 +1,24 @@
-<!-- ToDo: close the nav menu on button click -->
-
 <script setup lang="ts">
-let props = defineProps({
-  To: String,
+import router from '@/router'
+
+const props = defineProps({
+  To: { type: String, required: true },
   Name: String
 })
+
+const emit = defineEmits(['navigating'])
+
+function handleClick() {
+  emit('navigating')
+  router.push({ path: props.To })
+}
 </script>
 
 <template>
   <div class="link-container">
-    <RouterLink class="link" :to="props.To ?? ''">{{ props.Name }}</RouterLink>
+    <a class="link" @click="handleClick()">
+      {{ props.Name }}
+    </a>
   </div>
 </template>
 
